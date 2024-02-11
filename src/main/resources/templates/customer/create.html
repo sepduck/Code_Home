@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <form action="/ks/save-cus" method="post" th:object="${customer}">
+        <input th:field="*{cusid}" hidden="">
+        <label>Tên khách hàng</label><input type="text" th:field="*{cusname}">
+        <label>Số điện thoại</label><input type="tel" th:field="*{phone}">
+        <label>Mã địa chỉ</label><input type="text" th:field="*{aid}">
+        <button type="submit">Đăng ký</button>
+
+    </form>
+</div>
+</body>
+</html>
