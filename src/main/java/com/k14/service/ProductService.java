@@ -1,13 +1,13 @@
 package com.k14.service;
 
 import com.k14.model.Product;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
 public interface ProductService {
-    void create(Product product);
-
-    List<Product> read();
-    void delete(int id);
-    Product findById(int id);
+    ResponseEntity<?> getList();
+    ResponseEntity<?> save(Product product);
+    ResponseEntity<?> delete(int id);
+    ResponseEntity<?> findById(int id);
 }
